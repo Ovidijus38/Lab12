@@ -2,7 +2,7 @@ import javax.swing.*;
 import java.awt.event.*;
 import java.awt.*;
 
-public class BorderLayoutWindowEvent extends JFrame {
+public class BorderLayoutWindowEvent extends JFrame implements WindowListener {
 
     private JButton jb[];
 
@@ -23,10 +23,12 @@ public class BorderLayoutWindowEvent extends JFrame {
             add(jb[i],regions[i]);
         }
 
-        addWindowListener(new WindowEventHandler());
+        addWindowListener(this);
         setSize(400, 300);
 
         setVisible(true);
+
+
     }
 
 
@@ -34,7 +36,7 @@ public class BorderLayoutWindowEvent extends JFrame {
         BorderLayoutWindowEvent b = new BorderLayoutWindowEvent();
     }
 
-    private class WindowEventHandler implements WindowListener {
+
 
         public void windowOpened(WindowEvent e) {
             JOptionPane.showMessageDialog(null, "Window now opened", "Opening Window",
@@ -86,4 +88,3 @@ public class BorderLayoutWindowEvent extends JFrame {
             System.out.println("Window Deactivated");
         }
     }
-}
