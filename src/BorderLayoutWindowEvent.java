@@ -6,6 +6,7 @@ public class BorderLayoutWindowEvent extends JFrame {
 
     private JButton jb[];
 
+
     public BorderLayoutWindowEvent() {
         super("Demonstrating BorderLayout & WindowEvent");
 
