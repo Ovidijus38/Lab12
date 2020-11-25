@@ -1,5 +1,6 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.MouseEvent;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
 
@@ -55,6 +56,7 @@ public class BorderLayoutWindowEvent2 extends JFrame{
 
             dispose();
         }
+
 
         public void windowClosed(WindowEvent e) {
 
